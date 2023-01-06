@@ -1,0 +1,21 @@
+<div class="wrapper" *ngIf="sobremi">
+    <form class="form" (ngSubmit)="onUpdate()" novalidate #f="ngForm">
+        <div class="pageTitle title">
+               <a href="">Editar SobreMi</a>
+        </div>
+        <div class="secondaryTitle title">
+
+        </div>
+        <div>
+            <div>
+                <input type="text" class="name formEntry" placeholder="Nombre" id="nombreE" name="nombreE"
+                    [(ngModel)]="sobremi.sobreMi" required>
+            </div>
+            <div>
+                <textarea class="message formEntry" placeholder="Descripcion" id="descripcionE" name="descripcionE"
+                [(ngModel)]="sobremi.sobreMiT" required></textarea>
+            </div>
+        </div>
+        <button class="submit formEntry">Actualizar</button>
+    </form>
+</div>

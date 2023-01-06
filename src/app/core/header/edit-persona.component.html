@@ -1,0 +1,26 @@
+<div class="wrapper" *ngIf="persona">
+    <form class="form" (ngSubmit)="onUpdate()" novalidate #f="ngForm">
+        <div class="pageTitle title">
+            Nueva Experiencia
+        </div>
+        <div class="secondaryTitle title">
+
+        </div>
+        <div>
+            <div>
+                <input type="text" class="name formEntry" placeholder="Nombre" id="nombreE" name="nombreE"
+                    [(ngModel)]="persona.nombre" required>
+            </div>
+
+            <div>
+                <textarea class="message formEntry" placeholder="Descripcion" id="descripcionE" name="descripcionE"
+                [(ngModel)]="persona.apellido" required></textarea>
+            </div>
+            <div>
+                <input type="file" class="file formEntry" id="nombreE2" name="nombreE2"
+                    [(ngModel)]="persona.img" (change)="uploadImg($event)" accept=".jpg, .jepg, .png">
+            </div>
+        </div>
+        <button class="submit formEntry">Crear</button>
+    </form>
+</div>

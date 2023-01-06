@@ -1,0 +1,41 @@
+.contenedor {
+    padding: 40px 10vw 40px 220px;
+    margin: 950px 0px 0 50px;
+    z-index: 2;
+    position: relative;
+    background-color: black;
+    color: white;
+    border-top: 4px solid;
+    display: block;
+
+
+}
+
+.contenedor h3 {
+    font-family: visitor2;
+    font-size: 36px;
+    margin-bottom: 30px;
+}
+
+.contenedor h3 a {
+    color: white;
+    font-family: bits;
+    font-size: 36px;
+    margin-bottom: 30px;
+    margin-left: 20px;
+    text-decoration: none;
+
+}
+
+.contenedor h3 a:hover {
+    color: #2980b9;
+}
+.contenido h5{
+    font-family: visitor2;
+    color: #2980b9;
+    font-size: 16px;
+}
+.texto {
+    font-family: visitor2;
+    font-size: 12px;
+}

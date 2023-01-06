@@ -1,0 +1,167 @@
+#title-Tag-Line {
+	font-size: 20px;
+}
+
+.card-item__bg {
+	width: 150px;
+	margin-left: auto;
+	margin-right: auto;
+	left: 0;
+	right: 0;
+	display: block;
+	position: relative;
+	margin: 30px auto;
+	transform: translate(0px, 50px);
+	z-index: 5;
+}
+
+
+.form {
+	background: #1c1c1c;
+
+	border-radius: 5px;
+	max-width: 500px;
+	margin-top: 100px;
+	margin-left: auto;
+	margin-right: auto;
+	padding: 10px 30px 5px;
+	left: 0;
+	right: 0;
+	position: absolute;
+	/*   z-index: 1; */
+	animation: bounce 1.5s infinite;
+	border-bottom: 6px solid white;
+	border-right: 6px solid white;
+
+}
+
+::-webkit-input-placeholder {
+	font-size: 1.3em;
+}
+
+
+
+.termsConditions {
+	margin: 0 auto 5px 80px;
+}
+
+.pageTitle {
+	margin: 40px 20px 40px 20px;
+
+}
+
+.pageTitle a {
+	height: 100px;
+	font-size: 3em;
+	font-family: pixel;
+	color: white;
+	line-height: 1em;
+	text-decoration: none;
+}
+
+.pageTitle a:hover {
+	color: #f4d783;
+}
+
+
+
+.secondaryTitle {
+	color: grey;
+}
+
+.name {
+	background-color: white;
+	color: Black;
+	font-size: 20px;
+	font-family: pixel;
+}
+
+
+.email {
+	background-color: white;
+	color: Black;
+	font-size: 20px;
+	height: 2em;
+	font-family: pixel;
+}
+
+
+
+.message {
+	background-color: white;
+	overflow: hidden;
+	color: Black;
+	font-size: 20px;
+	height: 10rem;
+	font-family: pixel;
+}
+
+
+
+.formEntry {
+	display: block;
+	margin: 30px auto;
+	min-width: 300px;
+	padding: 10px;
+	border-radius: 2px;
+	border: none;
+
+}
+
+.por {
+	display: block;
+	margin: 30px auto;
+	width: 32px;
+	padding: 10px;
+	border-radius: 2px;
+	border: none;
+	font-size: 20px;
+	font-family: pixel;
+}
+
+.submit {
+	font-family: pixel;
+	width: 320px;
+	background-color: white;
+	font-size: 20px;
+}
+
+.submit:hover {
+
+	background: #f4f4f4;
+
+}
+
+
+input[type='range'] {
+	display: block;
+	width: 250px;
+  }
+  
+  input[type='range']:focus {
+	outline: none;
+  }
+  
+  input[type='range'],
+  input[type='range']::-webkit-slider-runnable-track,
+  input[type='range']::-webkit-slider-thumb {
+	-webkit-appearance: none;
+  }
+  
+  input[type=range]::-webkit-slider-thumb {
+	background-color: white;
+	width: 20px;
+	height: 20px;
+	border: 3px solid black;
+	border-radius: 0%;
+	margin-top: -9px;
+
+}
+  
+
+  
+  
+  input[type=range]::-webkit-slider-runnable-track {
+	background-color: black;
+	height: 3px;
+  }

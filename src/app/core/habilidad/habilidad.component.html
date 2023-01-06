@@ -1,0 +1,43 @@
+<div class="container" id="habilidades">
+  <h4>Habilidades</h4>
+  <div class="skill-bars" >
+    <h5>FrontEnd
+      <a href="" routerLink="/nuevahys" *ngIf="isLogged">Q</a>
+    </h5>
+
+    <div class="bar" *ngFor="let skill of skill">
+      <div class="link">
+        <a href="#" routerLink="/edithys/{{skill.id}}" *ngIf="isLogged">O</a>
+        <a href="#" (click)="delete(skill.id)" *ngIf="isLogged">P</a>
+      </div>
+      <div class="progress-line">
+        <h6>{{skill.nombre}}</h6>
+        <progress-bar-angular barColor=#fff [progress]='(skill.porcentaje)' height="10px" borderRadius="square"
+          backgroundColor='rgb(28, 28, 28)' mode='determinate'></progress-bar-angular>
+        <h6 class="por">{{skill.porcentaje}}%</h6>
+      </div>
+    </div>
+
+  </div>
+  <div class="skill-bars">
+    <h5>BackEnd
+      <a href="" routerLink="/nuevahysb" *ngIf="isLogged">Q</a>
+    </h5>
+
+    <div class="bar" *ngFor="let skillb of skillb">
+      <div class="link">
+        <a href="#" routerLink="/edithysb/{{skillb.id}}" *ngIf="isLogged">O</a>
+        <a href="#" (click)="deleteb(skillb.id)" *ngIf="isLogged">P</a>
+      </div>
+      <div class="progress-line">
+        <h6>{{skillb.nombreB}}</h6>
+        <progress-bar-angular barColor=#fff [progress]='(skillb.porcentajeB)' height="10px" borderRadius="square"
+          backgroundColor='rgb(28, 28, 28)' mode='determinate'></progress-bar-angular>
+        <h6 class="por">{{skillb.porcentajeB}}%</h6>
+      </div>
+    </div>
+
+  </div>
+
+
+</div>

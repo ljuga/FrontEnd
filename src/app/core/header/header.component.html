@@ -1,0 +1,36 @@
+<script src="https://kit.fontawesome.com/77f0f8be30.js" crossorigin="anonymous"></script>
+<div >
+    <div class="banner">
+        
+        <div class="banner2" >
+            <h2 *ngFor="let Persona of pers">{{Persona.nombre}}</h2>
+            <h5 *ngFor="let Persona of pers">{{Persona.apellido}}</h5>
+        </div>
+    </div>
+    <div class="wrapper">
+        <div class="sidebar" >
+            
+            <div class="perfil" *ngFor="let Persona of pers">
+                <a href="#" routerLink="/editper/{{Persona.id}}" *ngIf="isLogged" >O</a>
+                <img src="{{Persona.img}}" alt="">
+                <h4 >{{Persona.nombre}}</h4>
+            </div>
+            <ul>
+                <li><a href="#"><i class="fa-solid">a</i>Inicio</a></li>
+                <li><a href="#sobremi"><i class="fa-solid">b</i>Sobre Mi</a></li>
+                <li><a href="#experiencia"><i class="fa-solid">c</i>Experiencia</a></li>
+                <li><a href="#proyectos"><i class="fa-solid">h</i>Proyectos</a></li>
+                <li><a href="#habilidades"><i class="fa-solid">d</i>Habilidades</a></li>
+                <li><a class="login1" href="#contacto"><i class="fa-solid">e</i>Contacto</a></li>
+                <li><a href="#" routerLink="login" *ngIf="!isLogged"><i class="fa-solid login">l</i>Ingresar</a></li>
+                <li><a href="#" (click)="onLogOut()" *ngIf="isLogged"><i class="fa-solid login">m</i>Salir</a></li>
+            </ul>
+            <div class="abajo">
+
+                <img src="https://desa.argentinaprograma.inti.gob.ar/pluginfile.php/1/theme_moove/logo/1660276176/APLogo-20-20.png"
+                    alt="">
+            </div>
+
+        </div>
+    </div>
+</div>

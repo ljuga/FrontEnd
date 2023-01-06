@@ -1,0 +1,26 @@
+
+<div class="wrapper">
+    <form class="form" (ngSubmit)="onCreate()" novalidate #f="ngForm">
+        <div class="pageTitle title">
+            <a href="">Nueva Experiencia</a>
+        </div>
+        <div class="secondaryTitle title">
+
+        </div>
+        <div>
+            <div>
+                <input type="text" class="name formEntry" placeholder="Nombre" id="nombreE" name="nombreE"
+                    [(ngModel)]="nombreE" required>
+            </div>
+            <div>
+                <input type="text" class="email formEntry" id="nombreE2" name="nombreE2" placeholder="Extra/Tiempo"
+                    [(ngModel)]="nombreE2" required>
+            </div>
+            <div>
+                <textarea class="message formEntry" placeholder="Descripcion" id="descripcionE" name="descripcionE"
+                [(ngModel)]="descripcionE" required></textarea>
+            </div>
+        </div>
+        <button class="submit formEntry">Crear</button>
+    </form>
+</div>

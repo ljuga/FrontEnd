@@ -1,0 +1,25 @@
+<div class="proyectos" id="proyectos">
+
+    <div class="cards">
+        <h3>Proyectos <a href="" routerLink="/nuevoproy" *ngIf="isLogged">Q</a></h3>
+        <div class="container" *ngFor="let Proyecto of proy">
+            <div class="icon"><a href="#" routerLink="/editproy/{{Proyecto.id}}" *ngIf="isLogged">O</a>
+                <a href="#" (click)="delete(Proyecto.id)" *ngIf="isLogged">P</a>
+            </div>
+            <div class="card">
+
+                <div class="plus">
+
+                    <img src="https://www.computerhope.com/cdn/web-page-elements.jpg" alt="">
+
+                    <div class="container2">
+                        <h2>{{Proyecto.nombreP}}<a href="{{Proyecto.nombreL}}" target="blank">Link</a></h2>
+                        <h4>{{Proyecto.nombrePT}}</h4>
+                        <p>{{Proyecto.descripcionP}}</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+    </div>
+</div>

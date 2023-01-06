@@ -1,0 +1,29 @@
+<div class="wrapper">
+    <form class="form" (ngSubmit)="onUpdate()" novalidate #f="ngForm">
+        <div class="pageTitle title">
+           <a href="">Editar Experiencia FrontEnd</a>
+        </div>
+        <div class="secondaryTitle title">
+
+        </div>
+        <div>
+            <div>
+                <input type="text" class="name formEntry" placeholder="Nombre" id="nombre" name="nombre"
+                    [(ngModel)]="skill.nombre" required>
+            </div>
+            <div>
+                <input type="text" class="por " placeholder="%" id="porcentaje" name="porcentaje"
+                    [(ngModel)]="skill.porcentaje" required>
+                <input type="range" class="name formEntry" min="0" max="100" onchange="rangevalue.value=value"
+                    placeholder="Porcentaje" id="porcentaje" name="porcentaje" [(ngModel)]="skill.porcentaje" required />
+            </div>
+            <div>
+                <input type="text" class="name formEntry" placeholder="Color" id="Color" name="Color"
+                    [(ngModel)]="skill.color" required>
+            </div>
+
+
+        </div>
+        <button class="submit formEntry">Crear</button>
+    </form>
+</div>      

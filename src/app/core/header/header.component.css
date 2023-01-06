@@ -1,0 +1,137 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    list-style: none;
+    text-decoration: none;
+    z-index: -100;
+
+}
+
+body {
+    background-color: #f3f5f9;
+}
+
+.banner2 {
+    background-image: url(../../../assets/img/1asd.png);
+    background-repeat: no-repeat;
+    background-position: center-top;
+    width: 100vw;
+    height: 100vw;
+    position: fixed;
+    top: 30%;
+    left: 45%;
+    z-index: -100;
+    color: white;
+}
+
+.banner2 h2 {
+    margin-top: 110px;
+    margin-left: 10px;
+    font-family: visitor2;
+    font-size: 20px;
+
+}
+
+.banner2 h5 {
+    margin-left: 10px;
+    font-family: visitor2;
+    font-size: 12px;
+}
+
+.wrapper {
+    top: -0px;
+    position: fixed;
+    width: 240px;
+    background: black;
+    height: 100%;
+    z-index: 1000;
+
+
+
+}
+
+.wrapper .sidebar {
+    margin-left: 1vw;
+    margin-top: 8vh;
+    height: 100%;
+    position: fixed;
+    font-family: visitor2;
+
+
+
+}
+
+.wrapper .sidebar h4 {
+    color: #fff;
+    text-align: center;
+    text-transform: none;
+    font-size: 1.2em;
+    font-family: visitor2;
+
+}
+
+.wrapper .perfil a {
+    text-decoration:none;
+    color:white;
+    position: absolute;
+    margin-left: 10px;
+    font-family: bits;
+    font-size: 3em;
+    z-index: 1001;
+}
+.wrapper .perfil a:hover {
+    color:#f4d783;
+}
+
+.perfil {
+    margin-bottom: 4vw;
+
+}
+
+
+.perfil img {
+    margin: 0 50px;
+    width: 9em;
+    -o-border-radius: 100%;
+    -webkit-border-radius: 100%;
+    -moz-border-radius: 100%;
+    -ms-border-radius: 100%;
+    border-radius: 100%;
+    border: 6px solid white;
+    margin-bottom: 20px;
+
+}
+
+.wrapper .sidebar ul li {
+    margin: 30px;
+
+}
+
+.wrapper .sidebar ul li a {
+    color: #b8b8b8;
+    display: block;
+
+}
+
+.wrapper .sidebar ul li a .fa-solid {
+    font-family: bits;
+    font-size: 25px;
+    margin-right: 20px;
+}
+
+
+
+.wrapper .sidebar ul li:hover a {
+    color:
+        #f4d783;
+}
+
+.login1 {
+    margin-bottom: 8vw;
+}
+
+.abajo img {
+    margin-left: 20px;
+    width: 10em;
+}
