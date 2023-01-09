@@ -14,15 +14,14 @@ export class NewProyectoComponent implements OnInit {
   nombrePT: string = '';
   descripcionP: string = '';
   nombreL: string = '';
+  imgP: string = '';
 
   constructor(private sProyecto: SProyectoService, private router: Router) { }
 
-  ngOnInit(): void {
-
-  }
+  ngOnInit(): void {}
 
   onCreate(): void {
-    const proy = new Proyecto(this.nombreP, this.nombrePT,this.descripcionP, this.nombreL);
+    const proy = new Proyecto(this.nombreP, this.nombrePT, this.descripcionP, this.nombreL, this.imgP);
     this.sProyecto.save(proy).subscribe(
       date => {
         alert("Proyecto añadido");
@@ -34,5 +33,12 @@ export class NewProyectoComponent implements OnInit {
     )
 
   }
+  async newImageUpload(event: any) {
+    const path = 'proyecto';
+    const name = this.nombreP;
+    const file = event.target.files[0];
+    const res = await this.sProyecto.uploadImage(file, path, name);
+    this.imgP = res;
 
+  }
 }

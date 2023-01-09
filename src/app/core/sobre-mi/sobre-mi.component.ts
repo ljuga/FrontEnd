@@ -1,4 +1,5 @@
 import { Component, OnInit } from '@angular/core';
+
 import { SobreMi } from 'src/app/model/sobre-mi';
 import { SSobreMiService } from 'src/app/service/s-sobre-mi.service';
 import { TokenService } from 'src/app/service/token.service';
@@ -31,11 +32,11 @@ export class SobreMiComponent implements OnInit {
     );
   }
   delete(id?: number) {
-    if (id != undefined){
+    if (id != undefined) {
       this.sSobreMi.delete(id).subscribe(
-        data=>{
+        data => {
           this.cargarSobreMi();
-        },erro => {
+        }, erro => {
           alert("No se pudo borrar el SobreMi");
         }
       )

@@ -1,6 +1,7 @@
 import { Component, OnInit } from '@angular/core';
 import { ActivatedRoute, Router } from '@angular/router';
 import { Proyecto } from 'src/app/model/proyecto';
+
 import { SProyectoService } from 'src/app/service/s-proyecto.service';
 
 @Component({
@@ -10,35 +11,45 @@ import { SProyectoService } from 'src/app/service/s-proyecto.service';
 })
 export class EditProyectoComponent implements OnInit {
 
-  proy: Proyecto = null;
+  proyecto: Proyecto = null;
 
   constructor(private sProyecto: SProyectoService, private activatedRouter: ActivatedRoute,
-    private router: Router) { }
+  private router: Router) { }
 
-  ngOnInit(): void {
-    const id = this.activatedRouter.snapshot.params['id'];
-    this.sProyecto.detail(id).subscribe(
-      data =>{
-        this.proy = data;
-      },err =>{
-        alert("error al modificar Proyecto");
-        this.router.navigate(['']);
-      }
-    )
+    ngOnInit(): void {
+      const id = this.activatedRouter.snapshot.params['id'];
+      this.sProyecto.detail(id).subscribe(
+        data => {
+          this.proyecto = data;
+        }, err => {
+          alert("Error al modificar proyecto");
+          this.router.navigate(['']);
+        }
+      )
+  
+    }
+  
+    onUpdate(): void {
+      const id = this.activatedRouter.snapshot.params['id'];
+      this.sProyecto.update(id, this.proyecto).subscribe(
+        data => {
+          this.router.navigate(['']);
+        }, err => {
+          alert("Error al modificar proyecto");
+          this.router.navigate(['']);
+        }
+      )
+  
+    }
 
-  }
+    async newImageUpload(event: any) {
+      const path = 'experiencia';
+      const name = this.proyecto.nombreP;
+      const file = event.target.files[0];
+      const res = await this.sProyecto.uploadImage(file, path, name);
+      this.proyecto.imgP = res;
+  
+    }
+  
 
-  onUpdate(): void {
-    const id = this.activatedRouter.snapshot.params['id'];
-    this.sProyecto.update(id, this.proy).subscribe(
-      data => {
-        this.router.navigate(['']);
-
-      }, err => {
-        alert("error al modificar Proyecto");
-        this.router.navigate(['']);
-      }
-    )
-
-  }
 }

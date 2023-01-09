@@ -1,36 +1,19 @@
-<div class="contenedor">
-  <input type="radio" checked id="toggle--login" name="toggle" class="ghost" />
-  <input type="radio" id="toggle--signup" name="toggle" class="ghost" />
 
+
+<div class="login-box">
   <a href=""><img class="logo framed"
-      src="https://desa.argentinaprograma.inti.gob.ar/pluginfile.php/1/theme_moove/logo/1660276176/APLogo-20-20.png"
-      alt="logo" /></a>
-
-  <form class="form form--login framed" #f="ngForm" (ngSubmit)="onLogin()" novalidate>
-
-      <input type="email" placeholder="Nombre de Usuario" class="input input--top" id="nombreUsuario"
-        name="nombreUsuario" [(ngModel)]="nombreUsuario" required name="usuario" />
-      <input type="password" placeholder="Contraseña" class="input" id="password" [(ngModel)]="password" required
-        name="contraseña" />
-
-      <input type="submit" value="Inicia Sesion" class="input input--submit" />
-
-      <label for="toggle--signup" class="text text--small text--centered">¿Nuevo? <strong>Regístrate</strong></label>
-
+    src="https://desa.argentinaprograma.inti.gob.ar/pluginfile.php/1/theme_moove/logo/1660276176/APLogo-20-20.png"
+    alt="logo" /></a>
+  <h2>Inicia Sesion</h2>
+  <form #f="ngForm" (ngSubmit)="onLogin()" novalidate>
+    <div class="user-box">
+      <input type="text" placeholder="Nombre de Usuario" id="nombreUsuario" name="nombreUsuario"
+        [(ngModel)]="nombreUsuario" required name="usuario">
+    </div>
+    <div class="user-box">
+      <input type="password" placeholder="Contraseña" id="password" [(ngModel)]="password" required name="contraseña">
+    </div>
+    <input class="submit" type="submit" value="Inicia Sesion" class="input input--submit" />
+    <h4 class="new">¿Nuevo?<a href="#" routerLink="/register"><strong>Regístrate</strong></a></h4>
   </form>
-
-  <form class="form form--signup framed">
-
-
-    <input type="email" placeholder="Email" class="input input--top" />
-    <input type="password" placeholder="Contraseña" class="input" />
-    <input type="text" placeholder="Nombre de Usuario" class="input" />
-    <input type="submit" value="Registrarse" class="input input--submit" />
-
-    <label for="toggle--login" class="text text--small text--centered"> ¿No eres Nuevo? <b>Inicia Sesion</b></label>
-  </form>
-
-
 </div>
-
-

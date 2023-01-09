@@ -1,0 +1,26 @@
+
+<div class="login-box">
+  <a href=""><img class="logo framed"
+    src="https://desa.argentinaprograma.inti.gob.ar/pluginfile.php/1/theme_moove/logo/1660276176/APLogo-20-20.png"
+    alt="logo" /></a>
+  <h2>Registrarse</h2>
+    <form #f="ngForm" (ngSubmit)="onCreate()" novalidate>
+      <div class="user-box">
+        <input type="text" placeholder="Nombre" id="nombre" name="nombre"
+          [(ngModel)]="nombre" required >
+      </div>
+      <div class="user-box">
+        <input type="text" placeholder="Nombre de Usuario" id="nombreUsuario" name="nombreUsuario"
+          [(ngModel)]="nombreUsuario" required >
+      </div>
+      <div class="user-box">
+        <input type="text" placeholder="Email" id="email" name="email"
+          [(ngModel)]="email" required >
+      </div>
+      <div class="user-box">
+        <input type="password" placeholder="Contraseña" id="password" [(ngModel)]="password" required name="contraseña">
+      </div>
+      <input class="submit" type="submit" value="Registrarse" class="input input--submit" />
+      <h4 class="new"> <a href="#" routerLink="/login"><strong>Inciar Sesion</strong></a></h4>
+    </form>
+  </div>

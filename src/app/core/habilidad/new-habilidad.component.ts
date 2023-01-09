@@ -14,7 +14,7 @@ export class NewHabilidadComponent implements OnInit {
 
   nombre: string;
   porcentaje: number;
-  color:number;
+  color:string;
 
   constructor(private skillS: SkillService, private router: Router) { }
 

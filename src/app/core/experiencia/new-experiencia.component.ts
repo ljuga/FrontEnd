@@ -12,24 +12,35 @@ export class NewExperienciaComponent implements OnInit {
   nombreE: string = '';
   nombreE2: string = '';
   descripcionE: string = '';
+  imgE: string = '';
 
-  constructor(private sExperiencia: SExperienciaService, private router: Router) { }
+  constructor(private sExperiencia: SExperienciaService, private router: Router) {}
+
+  isLogged = false;
 
   ngOnInit(): void {
-
   }
 
   onCreate(): void {
-    const expe = new Experiencia(this.nombreE, this.nombreE2, this.descripcionE);
-    this.sExperiencia.save(expe).subscribe(
-      date => {
-        alert("Experiencia añadida");
+    const proy = new Experiencia(this.nombreE, this.nombreE2, this.descripcionE, this.imgE);
+    this.sExperiencia.save(proy).subscribe(
+      data => {
+        alert("Proyecto añadido");
         this.router.navigate(['']);
       }, err => {
-        alert("Fallo");
+        alert("Falló");
         this.router.navigate(['']);
       }
     )
+
+  }
+
+  async newImageUpload(event: any) {
+    const path = 'experiencia';
+    const name = this.nombreE;
+    const file = event.target.files[0];
+    const res = await this.sExperiencia.uploadImage(file, path, name);
+    this.imgE = res;
 
   }
 

@@ -1,8 +1,5 @@
-<div class="contenedor" id="sobremi">
-    <h3>Sobre Mi
-        <div *ngFor="let SobreMi of smi">
-            <a href="#" routerLink="/editsmi/{{SobreMi.id}}" *ngIf="isLogged">O</a>
-        </div>
+<div class="contenedor" id="sobremi" >
+    <h3>Sobre Mi <div *ngFor="let SobreMi of smi"><a href="#" routerLink="/editsmi/{{SobreMi.id}}" *ngIf="isLogged">O</a></div>
     </h3>
 
     <div class="contenido" *ngFor="let SobreMi of smi">

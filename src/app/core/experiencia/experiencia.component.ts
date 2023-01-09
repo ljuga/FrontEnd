@@ -30,6 +30,7 @@ export class ExperienciaComponent implements OnInit {
       data => this.expe = data
     );
   }
+
   
   delete(id?: number) {
     if (id != undefined){

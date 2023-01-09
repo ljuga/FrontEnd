@@ -1,30 +1,52 @@
+<div class="form-container">
+    <h1 class="text-center"><a href="">Nuevo Proyecto</a></h1>
+    <form (ngSubmit)="onCreate()" novalidate #f="ngForm">
+        <div class="row">
+            <div class="inline-block right-margin">
+                <div class="label">
+                    Nombre<span id="firstName-info" class="info"></span>
+                </div>
+                <input type="text" class="input-field" id="nombreE" name="nombreE" [(ngModel)]="nombreP" required />
+            </div>
+            <div class="inline-block responsive">
+                <div class="label">
+                    Extra/Tiempo <span id="lastName-info" class="info"></span>
+                </div>
+                <input type="text" class="input-field" nid="nombreE2" name="nombreE2" [(ngModel)]="nombrePT" required />
+            </div>
 
-<div class="wrapper">
-    <form class="form" (ngSubmit)="onCreate()" novalidate #f="ngForm">
-        <div class="pageTitle title">
-            <a href="">Nuevo Proyecto</a>
         </div>
-        <div class="secondaryTitle title">
+
+        <div class="row">
+
+            <div class="inline-block right-margin">
+                <div class="label">
+                    Link<span id="lastName-info" class="info"></span>
+                </div>
+                <input type="text" class="input-field" nid="nombreE2" name="nombreE2" [(ngModel)]="nombreL" required />
+                <div class="inline-block responsive">
+                    <input type="file" class="input-field imgT" id="imgP" name="imgP" (change)="newImageUpload($event)"
+                        accept=".jpg, .jepg, .png">
+                </div>
+                <br>
+                <div class="img">
+                    <img [src]="imgP" alt="" height="200px">
+                </div>
+
+
+            </div>
+            <div class="inline-block responsive">
+                <div class="label">
+                    Descripcion <span id="message-info" class="info"></span>
+                </div>
+                <textarea name="contact-message" class="input-field" cols="60" rows="18" id="descripcionE"
+                    name="descripcionE" [(ngModel)]="descripcionP" required></textarea>
+            </div>
 
         </div>
-        <div>
-            <div>
-                <input type="text" class="name formEntry" placeholder="Nombre" id="nombreE" name="nombreE"
-                    [(ngModel)]="nombreP" required>
-            </div>
-            <div>
-                <input type="text" class="email formEntry" id="nombrePT" name="nombrePT" placeholder="Extra/Etiqueta"
-                    [(ngModel)]="nombrePT" required>
-            </div>
-            <div>
-                <input type="text" class="email formEntry" id="nombreE2" name="nombreE2" placeholder="Link"
-                    [(ngModel)]="nombreL" required>
-            </div>
-            <div>
-                <textarea class="message formEntry" placeholder="Descripcion" id="descripcionE" name="descripcionP"
-                [(ngModel)]="descripcionP" required></textarea>
-            </div>
+        <div class="row">
+            <input type="submit" name="Enviar" class="btn-submit" value="Enviar" />
         </div>
-        <button class="submit formEntry">Crear</button>
+
     </form>
 </div>

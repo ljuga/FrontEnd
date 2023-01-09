@@ -1,19 +1,19 @@
-<script src="https://kit.fontawesome.com/77f0f8be30.js" crossorigin="anonymous"></script>
-<div >
+
+<div>
     <div class="banner">
-        
-        <div class="banner2" >
+
+        <div class="banner2">
             <h2 *ngFor="let Persona of pers">{{Persona.nombre}}</h2>
             <h5 *ngFor="let Persona of pers">{{Persona.apellido}}</h5>
         </div>
     </div>
-    <div class="wrapper">
-        <div class="sidebar" >
-            
-            <div class="perfil" *ngFor="let Persona of pers">
-                <a href="#" routerLink="/editper/{{Persona.id}}" *ngIf="isLogged" >O</a>
+    <div class="wrapper" *ngIf="pers">
+        <div class="sidebar">
+
+            <div class="perfil" *ngFor="let Persona of pers" >
+                <a href="#" routerLink="/editper/{{Persona.id}}" *ngIf="isLogged">O</a>
                 <img src="{{Persona.img}}" alt="">
-                <h4 >{{Persona.nombre}}</h4>
+                <h4>{{Persona.nombre}}</h4>
             </div>
             <ul>
                 <li><a href="#"><i class="fa-solid">a</i>Inicio</a></li>

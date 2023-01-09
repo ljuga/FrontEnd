@@ -1,26 +1,44 @@
-<div class="wrapper" *ngIf="persona">
-    <form class="form" (ngSubmit)="onUpdate()" novalidate #f="ngForm">
-        <div class="pageTitle title">
-            Nueva Experiencia
-        </div>
-        <div class="secondaryTitle title">
-
-        </div>
-        <div>
-            <div>
-                <input type="text" class="name formEntry" placeholder="Nombre" id="nombreE" name="nombreE"
-                    [(ngModel)]="persona.nombre" required>
+<div class="form-container">
+    <h1 class="text-center"><a href="">Editar Persona</a></h1>
+    <form (ngSubmit)="onUpdate()" novalidate #f="ngForm">
+        <div class="row">
+            <div class="inline-block right-margin">
+                <div class="label">
+                    Nombre<span id="firstName-info" class="info"></span>
+                </div>
+                <input type="text" class="input-field" id="nombreE" name="nombreE" [(ngModel)]="persona.nombre" required
+                    required />
             </div>
 
-            <div>
-                <textarea class="message formEntry" placeholder="Descripcion" id="descripcionE" name="descripcionE"
-                [(ngModel)]="persona.apellido" required></textarea>
+            <div class="inline-block right-margin">
+                <div class="inline-block responsive">
+                    <input type="file" class="input-field imgT" id="imgP" name="imgP" (change)="newImageUpload($event)"
+                        accept=".jpg, .jepg, .png">
+                </div>
+                <br>
+
             </div>
-            <div>
-                <input type="file" class="file formEntry" id="nombreE2" name="nombreE2"
-                    [(ngModel)]="persona.img" (change)="uploadImg($event)" accept=".jpg, .jepg, .png">
-            </div>
+
         </div>
-        <button class="submit formEntry">Crear</button>
+
+        <div class="row">
+            <div class="inline-block responsive">
+                <div class="label">
+                    Extra/Tiempo <span id="lastName-info" class="info"></span>
+                </div>
+                <input type="text" class="input-field" nid="nombreE2" name="nombreE2" [(ngModel)]="persona.apellido"
+                    required />
+            </div>
+            <div class="img">
+                <img [src]="persona.img" alt="" height="200px">
+            </div>
+
+
+
+        </div>
+        <div class="row">
+            <input type="submit" name="Enviar" class="btn-submit" value="Enviar" />
+        </div>
+
     </form>
 </div>

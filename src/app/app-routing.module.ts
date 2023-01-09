@@ -12,10 +12,12 @@ import { EditHabilidadBComponent } from './core/habilidad/edit-habilidad-b.compo
 import { EditPersonaComponent } from './core/header/edit-persona.component';
 import { NewProyectoComponent } from './core/proyecto/new-proyecto.component';
 import { EditProyectoComponent } from './core/proyecto/edit-proyecto.component';
+import { RegisterComponent } from './login/register.component';
 
 const routes: Routes = [
   { path: '', component: CoreComponent },
   { path: 'login', component: LoginComponent },
+  { path: 'register', component: RegisterComponent },
   { path: 'nuevaexp', component: NewExperienciaComponent },
   { path: 'editper/:id', component: EditPersonaComponent },
   { path: 'editexp/:id', component: EditExperienciaComponent },

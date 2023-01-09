@@ -1,25 +1,45 @@
-<div class="wrapper" *ngIf="expLab">
-    <form class="form" (ngSubmit)="onUpdate()" novalidate #f="ngForm">
-        <div class="pageTitle title">
-           <a href="">Editar Experiencia</a>
+
+<div class="form-container">
+    <h1 class="text-center"><a href="">Editar Experiencia</a></h1>
+    <form (ngSubmit)="onUpdate()" novalidate #f="ngForm">
+        <div class="row">
+            <div class="inline-block right-margin">
+                <div class="label">
+                    Nombre<span id="firstName-info" class="info"></span>
+                </div>
+                <input type="text" class="input-field" id="nombreE" name="nombreE" [(ngModel)]="expLab.nombreE" required />
+            </div>
+            <div class="inline-block responsive">
+                <div class="label">
+                    Extra/Tiempo <span id="lastName-info" class="info"></span>
+                </div>
+                <input type="text" class="input-field" nid="nombreE2" name="nombreE2" [(ngModel)]="expLab.nombreE2" required />
+            </div>
         </div>
-        <div class="secondaryTitle title">
+
+        <div class="row">
+            <div class="inline-block right-margin">
+                <div class="inline-block responsive">
+                    <input type="file" class="input-field imgT" id="imgE" name="imgE" (change)="newImageUpload($event)"
+                        accept=".jpg, .jepg, .png">
+                </div>
+                <br>
+                <div class="img">
+                    <img [src]="expLab.imgE" alt="" height="100px">
+                </div>
+            </div>
+            <div class="inline-block responsive">
+                <div class="label">
+                    Descripcion <span id="message-info" class="info"></span>
+                </div>
+                <textarea name="contact-message" class="input-field" cols="60" rows="8" id="descripcionE"
+                    name="descripcionE" [(ngModel)]="expLab.descripcionE" required></textarea>
+            </div>
 
         </div>
-        <div>
-            <div>
-                <input type="text" class="name formEntry" placeholder="Nombre" id="nombreE" name="nombreE"
-                    [(ngModel)]="expLab.nombreE" required>
-            </div>
-            <div>
-                <input type="text" class="email formEntry" id="nombreE2" name="nombreE2" placeholder="Extra/Tiempo"
-                    [(ngModel)]="expLab.nombreE2" required>
-            </div>
-            <div>
-                <textarea class="message formEntry" placeholder="Descripcion" id="descripcionE" name="descripcionE"
-                [(ngModel)]="expLab.descripcionE" required></textarea>
-            </div>
+        <div class="row">
+            <input type="submit" name="Enviar" class="btn-submit" value="Enviar" />
         </div>
-        <button class="submit formEntry">Crear</button>
+
     </form>
 </div>

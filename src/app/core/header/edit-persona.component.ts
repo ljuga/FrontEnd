@@ -39,11 +39,17 @@ export class EditPersonaComponent implements OnInit {
         this.router.navigate(['']);
       }
     )
+  }
+
+  
+  async newImageUpload(event: any) {
+    const path = 'persona';
+    const name = this.persona.nombre;
+    const file = event.target.files[0];
+    const res = await this.sPersona.uploadImage(file, path, name);
+    this.persona.img = res;
 
   }
 
-  uploadImg($event:any){
-    
-  }
 
 }

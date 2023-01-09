@@ -9,6 +9,7 @@ import { SExperienciaService } from 'src/app/service/s-experiencia.service';
   styleUrls: ['./edit-experiencia.component.css']
 })
 export class EditExperienciaComponent implements OnInit {
+
   expLab: Experiencia = null;
 
   constructor(private sExperiencia: SExperienciaService, private activatedRouter: ActivatedRoute,
@@ -17,10 +18,10 @@ export class EditExperienciaComponent implements OnInit {
   ngOnInit(): void {
     const id = this.activatedRouter.snapshot.params['id'];
     this.sExperiencia.detail(id).subscribe(
-      data =>{
+      data => {
         this.expLab = data;
-      },err =>{
-        alert("error al modificar experiencia");
+      }, err => {
+        alert("Error al modificar proyecto");
         this.router.navigate(['']);
       }
     )
@@ -32,12 +33,22 @@ export class EditExperienciaComponent implements OnInit {
     this.sExperiencia.update(id, this.expLab).subscribe(
       data => {
         this.router.navigate(['']);
-
       }, err => {
-        alert("error al modificar experiencia");
+        alert("Error al modificar proyecto");
         this.router.navigate(['']);
       }
     )
 
   }
+
+  async newImageUpload(event: any) {
+    const path = 'experiencia';
+    const name = this.expLab.nombreE;
+    const file = event.target.files[0];
+    const res = await this.sExperiencia.uploadImage(file, path, name);
+    this.expLab.imgE = res;
+
+  }
+
+
 }
