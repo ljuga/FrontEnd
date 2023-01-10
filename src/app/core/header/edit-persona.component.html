@@ -1,4 +1,4 @@
-<div class="form-container">
+<div class="form-container" *ngIf="persona">
     <h1 class="text-center"><a href="">Editar Persona</a></h1>
     <form (ngSubmit)="onUpdate()" novalidate #f="ngForm">
         <div class="row">

@@ -12,7 +12,7 @@ import { SkillService } from 'src/app/service/skill.service';
 })
 export class NewHabilidadComponent implements OnInit {
 
-  nombre: string;
+  nombreS: string;
   porcentaje: number;
   color:string;
 
@@ -23,7 +23,7 @@ export class NewHabilidadComponent implements OnInit {
 
 
   onCreate(): void {
-    const skill = new Skill(this.nombre, this.porcentaje, this.color);
+    const skill = new Skill(this.nombreS, this.porcentaje, this.color);
     this.skillS.save(skill).subscribe(
       date => {
         alert("Skill añadida");

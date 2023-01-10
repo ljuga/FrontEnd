@@ -13,14 +13,18 @@ import { EditPersonaComponent } from './core/header/edit-persona.component';
 import { NewProyectoComponent } from './core/proyecto/new-proyecto.component';
 import { EditProyectoComponent } from './core/proyecto/edit-proyecto.component';
 import { RegisterComponent } from './login/register.component';
+import { NewEducacionComponent } from './core/educacion/new-educacion.component';
+import { EditEducacionComponent } from './core/educacion/edit-educacion.component';
 
 const routes: Routes = [
   { path: '', component: CoreComponent },
   { path: 'login', component: LoginComponent },
   { path: 'register', component: RegisterComponent },
-  { path: 'nuevaexp', component: NewExperienciaComponent },
   { path: 'editper/:id', component: EditPersonaComponent },
+  { path: 'nuevaexp', component: NewExperienciaComponent },
   { path: 'editexp/:id', component: EditExperienciaComponent },
+  { path: 'nuevaedu', component: NewEducacionComponent },
+  { path: 'editedu/:id', component: EditEducacionComponent },
   { path: 'nuevahys', component: NewHabilidadComponent },
   { path: 'editproy/:id', component: EditProyectoComponent },
   { path: 'nuevoproy', component: NewProyectoComponent },

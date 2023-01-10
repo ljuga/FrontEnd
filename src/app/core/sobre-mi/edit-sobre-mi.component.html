@@ -1,6 +1,6 @@
 
-<div class="form-container">
-    <h1 class="text-center"><a href="">Editar Proyecto</a></h1>
+<div class="form-container" *ngIf="sobremi">
+    <h1 class="text-center"><a href="">Editar Persona</a></h1>
     <form (ngSubmit)="onUpdate()" novalidate #f="ngForm">
         <div class="row">
             <div class="inline-block right-margin">

@@ -1,29 +1,38 @@
-<div class="wrapper">
-    <form class="form" (ngSubmit)="onCreate()" novalidate #f="ngForm">
-        <div class="pageTitle title">
-            <a href="">Nueva Experiencia BackEnd</a>
-        </div>
-        <div class="secondaryTitle title">
 
-        </div>
-        <div>
-            <div>
-                <input type="text" class="name formEntry" placeholder="Nombre" id="nombreB" name="NombreB"
-                    [(ngModel)]="nombreB" required>
+<div class="form-container">
+    <h1 class="text-center"><a href="">Nueva Habilidad BackEnd</a></h1>
+    <form (ngSubmit)="onCreate()" novalidate #f="ngForm">
+        <div class="row">
+            <div class="inline-block right-margin">
+                <div class="label">
+                    Nombre<span id="firstName-info" class="info"></span>
+                </div>
+                <input type="text" class="input-field" id="nombreE" name="nombreE" [(ngModel)]="nombreB" required />
             </div>
-            <div>
-                <input type="text" class="por " placeholder="%" id="porcentajeB" name="porcentajeB"
-                    [(ngModel)]="porcentajeB" required>
-                <input type="range" class="name formEntry" min="0" max="100" onchange="rangevalue.value=value"
+            <div class="inline-block responsive">
+                <div class="label">
+                    Porcentaje<span id="lastName-info" class="info"></span>
+                </div>
+                <input type="text" class="input-field" nid="nombreE2" name="nombreE2" [(ngModel)]="porcentajeB"
+                    required />
+            </div>
+        </div>
+
+        <div class="row">
+            <div class="inline-block responsive porc">
+                <span class="cuadrado" style="background-color:color"></span>
+            </div>
+
+            <div class="inline-block responsive">
+                <input type="range" class="responsive input-field " min="0" max="100" 
                     placeholder="Porcentaje" id="porcentaje" name="porcentaje" [(ngModel)]="porcentajeB" required />
             </div>
-            <div>
-                <input type="text" class="name formEntry" placeholder="Color" id="ColorB" name="ColorB"
-                    [(ngModel)]="colorB" required>
-            </div>
-
-
         </div>
-        <button class="submit formEntry">Crear</button>
+        <div class="row">
+            <input type="submit" name="Enviar" class="btn-submit" value="Enviar" />
+        </div>
+
+
+
     </form>
 </div>

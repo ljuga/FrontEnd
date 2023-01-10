@@ -11,7 +11,7 @@
         <a href="#" (click)="delete(skill.id)" *ngIf="isLogged">P</a>
       </div>
       <div class="progress-line">
-        <h6>{{skill.nombre}}</h6>
+        <h6>{{skill.nombreS}}</h6>
         <progress-bar-angular barColor=#fff [progress]='(skill.porcentaje)' height="10px" borderRadius="square"
           backgroundColor='rgb(28, 28, 28)' mode='determinate'></progress-bar-angular>
         <h6 class="por">{{skill.porcentaje}}%</h6>
@@ -31,7 +31,7 @@
       </div>
       <div class="progress-line">
         <h6>{{skillb.nombreB}}</h6>
-        <progress-bar-angular barColor=#fff [progress]='(skillb.porcentajeB)' height="10px" borderRadius="square"
+        <progress-bar-angular barColor="#fff" [progress]='(skillb.porcentajeB)' height="10px" borderRadius="square"
           backgroundColor='rgb(28, 28, 28)' mode='determinate'></progress-bar-angular>
         <h6 class="por">{{skillb.porcentajeB}}%</h6>
       </div>

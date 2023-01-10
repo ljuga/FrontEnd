@@ -1,0 +1,129 @@
+@import url(https://fonts.googleapis.com/css?family=Roboto:300,400,600);
+
+.container2 {
+  background: black;
+  padding: 40px 40px 40px 230px;
+  border-top: 4px solid white;
+
+}
+
+.container2 h4 {
+  color: white;
+  font-family: visitor2;
+  font-size: 36px;
+  margin-bottom: 30px;
+  margin-left: 40px;
+}
+
+.container2 h4 a {
+  color: white;
+  font-family: bits;
+  font-size: 36px;
+  margin-bottom: 30px;
+  margin-left: 0px;
+  text-decoration: none;
+
+}
+
+.container2 h4 a:hover {
+  color: #2980b9;
+}
+
+
+.container {
+  margin-top: 10px;
+  width: 100%;
+  padding: 20px;
+  display: -ms-flexbox;
+  -ms-flex-wrap: wrap;
+  display: flex;
+  flex-wrap: wrap;
+  align-items: center;
+}
+
+
+.card {
+  width: 370px;
+  color: white;
+  height: fit-content;
+  border-left: 5px solid;
+  border-bottom: 5px solid;
+  margin: 30px;
+  text-align: right;
+}
+
+
+
+
+.card a {
+  margin: 10px;
+  color: white;
+  font-size: 40px;
+  font-family: bits;
+  text-decoration: none;
+}
+
+.card a:hover {
+  color: #2980b9;
+}
+
+.card * {
+  -webkit-box-sizing: border-box;
+  box-sizing: border-box;
+}
+
+.card img {
+  max-width: 100%;
+  vertical-align: top;
+  opacity: 0.85;
+}
+
+.card .card2 {
+  text-align: left;
+  padding: 25px;
+  position: relative;
+}
+
+
+
+.card .card2 a {
+  padding: 5px;
+  border: 1px solid #ffffff;
+  color: #ffffff;
+  font-size: 0.7em;
+  text-transform: uppercase;
+  margin: 10px 0;
+  display: inline-block;
+  opacity: 0.65;
+  width: 47%;
+  text-align: center;
+  text-decoration: none;
+  font-weight: 600;
+  letter-spacing: 1px;
+  position: relative;
+}
+
+.card .profile {
+  position: relative;
+  margin: 0px 0px 20px 0px;
+  z-index: 1;
+  min-width: 0px;
+  max-width: 300px;
+  max-height: 100px;
+  box-shadow: 0 0 15px rgba(0, 0, 0, 0.3);
+}
+
+
+
+.card h3 {
+  display: block;
+  font-size: 1em;
+  color: #2980b9;
+}
+
+.card p {
+  margin: 0 0 10px;
+  font-size: 0.8em;
+  letter-spacing: 1px;
+  opacity: 0.8;
+}

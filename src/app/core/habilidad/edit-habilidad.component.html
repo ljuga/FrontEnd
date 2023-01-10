@@ -1,29 +1,38 @@
-<div class="wrapper">
-    <form class="form" (ngSubmit)="onUpdate()" novalidate #f="ngForm">
-        <div class="pageTitle title">
-           <a href="">Editar Experiencia FrontEnd</a>
-        </div>
-        <div class="secondaryTitle title">
-
-        </div>
-        <div>
-            <div>
-                <input type="text" class="name formEntry" placeholder="Nombre" id="nombre" name="nombre"
-                    [(ngModel)]="skill.nombre" required>
+<div class="form-container" *ngIf="skill">
+    <h1 class="text-center"><a href="">Editar Habilidad FrontEnd</a></h1>
+    <form (ngSubmit)="onUpdate()" novalidate #f="ngForm">
+        <div class="row">
+            <div class="inline-block right-margin">
+                <div class="label">
+                    Nombre <span id="firstName-info" class="info"></span>
+                </div>
+                <input type="text" class="input-field" id="nombreE" name="nombreE" [(ngModel)]="skill.nombreS"
+                    required />
             </div>
-            <div>
-                <input type="text" class="por " placeholder="%" id="porcentaje" name="porcentaje"
-                    [(ngModel)]="skill.porcentaje" required>
-                <input type="range" class="name formEntry" min="0" max="100" onchange="rangevalue.value=value"
-                    placeholder="Porcentaje" id="porcentaje" name="porcentaje" [(ngModel)]="skill.porcentaje" required />
+            <div class="inline-block responsive">
+                <div class="label">
+                    Porcentaje<span id="lastName-info" class="info"></span>
+                </div>
+                <input type="text" class="input-field" nid="nombreE2" name="nombreE2" [(ngModel)]="skill.porcentaje"
+                    required />
             </div>
-            <div>
-                <input type="text" class="name formEntry" placeholder="Color" id="Color" name="Color"
-                    [(ngModel)]="skill.color" required>
-            </div>
-
-
         </div>
-        <button class="submit formEntry">Crear</button>
+
+        <div class="row">
+            <div class="inline-block responsive porc">
+                <span class="cuadrado" style="background-color:color"></span>
+            </div>
+
+            <div class="inline-block responsive">
+                <input type="range" class="responsive input-field " min="0" max="100" placeholder="Porcentaje"
+                    id="porcentaje" name="porcentaje" [(ngModel)]="skill.porcentaje" required />
+            </div>
+        </div>
+        <div class="row">
+            <input type="submit" name="Enviar" class="btn-submit" value="Enviar" />
+        </div>
+
+
+
     </form>
-</div>      
+</div>

@@ -1,19 +1,18 @@
-
-<div class="form-container" *ngIf="expLab">
-    <h1 class="text-center"><a href="">Editar Experiencia</a></h1>
-    <form (ngSubmit)="onUpdate()" novalidate #f="ngForm">
+<div class="form-container">
+    <h1 class="text-center"><a href="">Nueva Educacion</a></h1>
+    <form (ngSubmit)="onCreate()" novalidate #f="ngForm">
         <div class="row">
             <div class="inline-block right-margin">
                 <div class="label">
                     Nombre<span id="firstName-info" class="info"></span>
                 </div>
-                <input type="text" class="input-field" id="nombreE" name="nombreE" [(ngModel)]="expLab.nombreE" required />
+                <input type="text" class="input-field" id="nombreE" name="nombreE" [(ngModel)]="nombreED" required />
             </div>
             <div class="inline-block responsive">
                 <div class="label">
                     Extra/Tiempo <span id="lastName-info" class="info"></span>
                 </div>
-                <input type="text" class="input-field" nid="nombreE2" name="nombreE2" [(ngModel)]="expLab.nombreE2" required />
+                <input type="text" class="input-field" nid="nombreE2" name="nombreE2" [(ngModel)]="nombreED2" required />
             </div>
         </div>
 
@@ -25,15 +24,15 @@
                 </div>
                 <br>
                 <div class="img">
-                    <img [src]="expLab.imgE" alt="" height="100px">
+                    <img [src]="imgED" alt="" height="100px">
                 </div>
             </div>
             <div class="inline-block responsive">
                 <div class="label">
                     Descripcion <span id="message-info" class="info"></span>
                 </div>
-                <textarea name="contact-message" class="input-field" cols="60" rows="8" id="descripcionE"
-                    name="descripcionE" [(ngModel)]="expLab.descripcionE" required></textarea>
+                <textarea name="contact-message" class="input-field" cols="60" rows="8" id="descripcionP"
+                    name="descripcionE" [(ngModel)]="descripcionED" required></textarea>
             </div>
 
         </div>

@@ -1,0 +1,19 @@
+<div class="container2" id="educacion">
+    <h4>Educacion <a href="" routerLink="/nuevaedu" *ngIf="isLogged">Q</a></h4>
+    <div class="container" id="educacion">
+        <div class="card" *ngFor="let Educacion of educacion">
+            <a href="#" routerLink="/editedu/{{Educacion.id}}" *ngIf="isLogged">O</a>
+            <a href="#" (click)="delete(Educacion.id)" *ngIf="isLogged">P</a>
+            <div class="card2">
+                <img src="{{Educacion.imgED}}" alt="Agregar IMG en Editar"
+                    class="profile" />
+                <h2>{{Educacion.nombreED}}</h2>
+                <h3>{{Educacion.nombreED2}}</h3>
+                <p>{{Educacion.descripcionED}}</p>
+
+            </div>
+        </div>
+
+
+    </div>
+</div>
